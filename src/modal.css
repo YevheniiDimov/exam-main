@@ -1,0 +1,93 @@
+.cstm_modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.cstm_modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal_content {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  max-width: 700px;
+  transition: 0.4s ease-in-out;
+  transform: scale(0);
+  border: 1px solid #000;
+}
+
+.modal_content.active {
+  transform: scale(1);
+}
+
+.modal_content.large {
+  width: 80vw;
+}
+.modal_content.small {
+  width: 350px;
+}
+.modal_content.medium {
+  width: 50vw;
+}
+
+.modal_content button { /* default styles for buttons in form */
+  margin-left: auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 7px 4px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 7px 4px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 7px 4px -1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-color: var(--base-color);
+}
+
+.hide_close .modal_close {
+  display: none;
+}
+
+.modal_close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal_header {
+  width: 13%;
+}
+
+.modal_body {
+  text-align: left;
+  /* background: var(--base-color); */
+}
+
+.modal_body a {
+  text-decoration: none;
+  color: #337ac4;
+  font-family: "Noto Sans";
+}
+
+.modal_body ul {
+  margin-left: 20px;
+}
+
+/* Some specific styles for modals */
+.ask_question {
+  color: #fff;
+}
